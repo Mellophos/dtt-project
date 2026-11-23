@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - Preferences</title>
+    <script src="../js/theme.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/settings.css" rel="stylesheet">
+</head>
+
+<body onload="updateActiveTheme()">
+<header>
+    <img alt="logo" src="../images/ite_logo.png">
+    <h1>ITE Ordering App</h1>
+</header>
+
+<main>
+    <section class="back-section">
+        <a href="../settings.html">← Back to Settings</a>
+    </section>
+
+    <h1>Preferences</h1>
+
+    <section>
+        <h2>Appearance</h2>
+        <div class="pref-options">
+            <button onclick="changeTheme(this, 'light')" class="pref-btn">Light</button>
+            <button onclick="changeTheme(this, 'dark')" class="pref-btn">Dark</button>
+            <button onclick="changeTheme(this, 'high contrast')" class="pref-btn">High Contrast</button>
+            <button onclick="changeTheme(this, 'midnight')" class="pref-btn">Midnight Purple</button>
+        </div>
+    </section>
+</main>
+
+<nav>
+    <div class="navbar">
+        <ul class="nav-links">
+            <li class=""><a href="../home.html">
+                <img alt="home" src="../images/home.png">
+                <p>Home</p>
+            </a></li>
+            <li class=""><a href="../order.html">
+                <img alt="order" src="../images/order.png">
+                <p>Order</p>
+            </a></li>
+            <li class=""><a href="../notifs.html">
+                <img alt="notifications" src="../images/notifs.png">
+                <p>Notifications</p>
+            </a></li>
+            <li class="active"><a href="../settings.html">
+                <img alt="settings" src="../images/settings.png">
+                <p>Settings</p>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer>
+    Made by Ng Guo Chiang
+</footer>
+</body>
+</html>

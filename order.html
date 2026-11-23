@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <script src="js/theme.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/order.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body>
+<header>
+    <img alt="logo" src="images/ite_logo.png">
+    <h1>ITE Ordering App</h1>
+</header>
+
+
+<main>
+
+    <!-- Page heading -->
+    <section class="order-heading">
+        <h1>Order Food</h1>
+        <p>Find something delicious on campus.</p>
+    </section>
+
+    <!-- Cafeteria selection -->
+    <section class="cafeteria-section">
+        <h2>Choose Your Cafeteria</h2>
+
+        <div class="cafeteria-options">
+            <button class="cafeteria-btn active" data-cafeteria="all">
+                All
+            </button>
+            <button class="cafeteria-btn" data-cafeteria="a">
+                Foodgle
+            </button>
+            <button class="cafeteria-btn" data-cafeteria="b">
+                Food Fest
+            </button>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <div class="order-search">
+            <label for="food-search"></label><input
+                id="food-search"
+                placeholder="Search for food or stalls..."
+                type="text"
+        >
+        </div>
+
+        <button class="voice-btn" id="voice-btn" type="button">
+            <img src="images/microphone.png" alt="">
+            Voice Order
+        </button>
+    </section>
+
+    <!-- Food categories -->
+    <section class="category-section">
+        <h2>Categories</h2>
+
+        <div class="category-options">
+            <button class="category-btn active"
+                    data-category="all">All
+            </button>
+
+            <button class="category-btn"
+                    data-category="rice">Rice
+            </button>
+
+            <button class="category-btn"
+                    data-category="noodles">Noodles
+            </button>
+
+            <button class="category-btn"
+                    data-category="grill">Grill
+            </button>
+
+            <button class="category-btn"
+                    data-category="snacks">Snacks
+            </button>
+
+            <button class="category-btn"
+                    data-category="drinks">Drinks
+            </button>
+        </div>
+    </section>
+
+    <!-- Stall listings -->
+    <section class="stall-section">
+        <h2>Available Stalls</h2>
+
+        <div class="stall-list">
+
+            <!-- Cafeteria A -->
+            <article class="stall-card"
+                     data-cafeteria="a"
+                     data-category="rice">
+
+                <img alt="Rice Corner"
+                     src="images/stall_placeholder.png">
+
+                <div class="stall-info">
+                    <h3>Rice Corner</h3>
+                    <p>Rice meals</p>
+                    <p class="stall-location">Location: Foodgle</p>
+                    <span class="stall-status open">Open</span>
+                    <a href="order/stall1.html">View Menu</a>
+                </div>
+            </article>
+
+            <article class="stall-card"
+                     data-cafeteria="a"
+                     data-category="noodles">
+
+                <img alt="Noodle House"
+                     src="images/stall_placeholder.png">
+
+                <div class="stall-info">
+                    <h3>Noodle House</h3>
+                    <p>Noodles</p>
+                    <p class="stall-location">Location: Foodgle</p>
+                    <span class="stall-status open">Open</span>
+                    <a href="order/stall2.html">View Menu</a>
+                </div>
+            </article>
+
+            <!-- Cafeteria B -->
+            <article class="stall-card"
+                     data-cafeteria="b"
+                     data-category="grill">
+
+                <img alt="Grill Station"
+                     src="images/stall_placeholder.png">
+
+                <div class="stall-info">
+                    <h3>Grill Station</h3>
+                    <p>Grilled food</p>
+                    <p class="stall-location">Location: Food Fest</p>
+                    <span class="stall-status closed">Closed</span>
+                    <a href="order/stall3.html">View Menu</a>
+                </div>
+            </article>
+
+            <article class="stall-card"
+                     data-cafeteria="b"
+                     data-category="snacks drinks">
+
+                <img alt="Snack Stop"
+                     src="images/stall_placeholder.png">
+
+                <div class="stall-info">
+                    <h3>Snack Stop</h3>
+                    <p>Snacks and drinks</p>
+                    <p class="stall-location">Location: Food Fest</p>
+                    <span class="stall-status open">Open</span>
+                    <a href="order/stall4.html">View Menu</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<div class="voice-overlay" id="voice-overlay" hidden>
+    <div class="voice-modal">
+
+        <button class="voice-close" id="voice-close" type="button">
+            &times;
+        </button>
+
+        <h2>Voice Ordering</h2>
+        <p id="voice-status">Listening for your order...</p>
+
+        <div class="mic-animation" id="mic-animation">
+            <img src="images/microphone.png" alt="Microphone">
+        </div>
+
+        <p class="voice-instruction">
+            Try saying something like:
+            <br>
+            <em>"One chicken rice and an iced tea."</em>
+        </p>
+
+        <div class="voice-result" id="voice-result" hidden>
+            <h3>We heard:</h3>
+            <p id="recognized-order"></p>
+        </div>
+
+        <div class="voice-actions" id="voice-actions" hidden>
+            <button id="retry-voice" type="button">
+                Try Again
+            </button>
+
+            <button id="confirm-voice" type="button">
+                Proceed to Payment
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<nav>
+    <div class="navbar">
+        <ul class="nav-links">
+            <li class=""><a href="home.html">
+                <img alt="home" src="images/home.png">
+                <p>Home</p>
+            </a></li>
+            <li class="active"><a href="order.html">
+                <img alt="order" src="images/order.png">
+                <p>Order</p>
+            </a></li>
+            <li class=""><a href="notifs.html">
+                <img alt="notifications" src="images/notifs.png">
+                <p>Notifications</p>
+            </a></li>
+            <li class=""><a href="settings.html">
+                <img alt="settings" src="images/settings.png">
+                <p>Settings</p>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer>
+    Made by Ng Guo Chiang
+</footer>
+<script src="js/order.js"></script>
+</body>
+</html>

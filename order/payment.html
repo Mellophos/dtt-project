@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <header>
+        <h1>Payment</h1>
+    </header>
+
+    <main class="payment-main">
+
+        <a href="../order.html" class="back-link">
+            &larr; Back to Order
+        </a>
+    
+        <h2>Review Your Order</h2>
+
+        <section class="payment-section">
+            <h3>Order Summary</h3>
+            <div id="order-items"></div>
+
+            <div class="total-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+
+            <div class="total-row">
+                <span>Additional Fees</span>
+                <span>$0.00</span>
+            </div>
+
+            <div class="total-row grand-total">
+                <span>Total</span>
+                <span id="total">$0.00</span>
+            </div>
+        </section>
+
+        <section class="payment-section">
+            <h3>Pickup Details</h3>
+
+            <div class="pickup-details">
+                <p><strong>Pickup Location:</strong></p>
+                <p id="pickup-location">Rice Corner</p>
+
+                <p><strong>Order Type:</strong></p>
+                <p>Self-collection</p>
+            </div>
+        </section>
+
+        <section class="payment-section">
+            <h3>Select Payment Method</h3>
+
+            <label class="payment-option">
+                <input type="radio" name="payment-method"
+                    value="PayNow" checked>
+                <span>PayNow</span>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment-method"
+                    value="Credit/Debit Card">
+                <span>Credit / Debit Card</span>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment-method"
+                    value="Cash">
+                <span>Cash</span>
+            </label>
+        </section>
+
+        <button id="pay-button" type="button">
+            Place Order
+        </button>
+
+    </main>
+
+    <!-- Confirmation overlay -->
+    <div class="payment-overlay" id="payment-overlay" hidden>
+        <div class="confirmation-modal">
+            <h2>Order Placed!</h2>
+
+            <p id="confirmation-message">
+                Your order has been placed successfully.
+            </p>
+
+            <p class="confirmation-note">
+                This is a simulated payment for the prototype.
+            </p>
+
+            <button id="done-button" type="button">
+                Done
+            </button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

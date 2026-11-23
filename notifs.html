@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+    <script src="js/theme.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/notifs.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body>
+<header>
+    <img alt="logo" src="images/ite_logo.png">
+    <h1>ITE Ordering App</h1>
+</header>
+
+
+<main>
+    <!-- Page heading -->
+    <section class="notif-heading">
+        <h1>Notifications</h1>
+        <p>Stay up to date with your orders and campus news.</p>
+    </section>
+
+    <!-- Notification controls -->
+    <section class="notif-controls">
+        <h2>Recent Activity</h2>
+        <p class="notif-count">You have 2 unread notifications.</p>
+    </section>
+
+    <!-- Notification list -->
+    <section class="notif-list">
+
+        <!-- Unread order notification -->
+        <article class="notif-card unread">
+            <div class="notif-icon order-icon">ORDER</div>
+
+            <div class="notif-content">
+                <div class="notif-title">
+                    <h3>Order Ready!</h3>
+                    <span class="unread-dot"></span>
+                </div>
+
+                <p>Your Chicken Rice order is ready for collection.</p>
+                <span class="notif-time">10 minutes ago</span>
+            </div>
+        </article>
+
+        <!-- Unread announcement -->
+        <article class="notif-card unread">
+            <div class="notif-icon announcement-icon">NEWS</div>
+
+            <div class="notif-content">
+                <div class="notif-title">
+                    <h3>New Meals Available!</h3>
+                    <span class="unread-dot"></span>
+                </div>
+
+                <p>Check out the latest meals added to our campus menu.</p>
+                <span class="notif-time">1 hour ago</span>
+            </div>
+        </article>
+
+        <!-- Read order notification -->
+        <article class="notif-card">
+            <div class="notif-icon order-icon">ORDER</div>
+
+            <div class="notif-content">
+                <div class="notif-title">
+                    <h3>Order Confirmed</h3>
+                </div>
+
+                <p>Your order has been received and is being prepared.</p>
+                <span class="notif-time">Yesterday, 12:30 PM</span>
+            </div>
+        </article>
+
+        <!-- Read announcement -->
+        <article class="notif-card">
+            <div class="notif-icon announcement-icon">NEWS</div>
+
+            <div class="notif-content">
+                <div class="notif-title">
+                    <h3>Stall Operating Hours</h3>
+                </div>
+
+                <p>Please note that the campus drink stall will close early today.</p>
+                <span class="notif-time">Yesterday, 9:00 AM</span>
+            </div>
+        </article>
+
+        <article class="notif-card">
+            <div class="notif-icon announcement-icon">NEWS</div>
+
+            <div class="notif-content">
+                <div class="notif-title">
+                    <h3>New Ordering App Launched!</h3>
+                </div>
+
+                <p></p>
+                <span class="notif-time">21 Nov, 12:00 PM</span>
+            </div>
+        </article>
+
+    </section>
+</main>
+
+
+<nav>
+    <div class="navbar">
+        <ul class="nav-links">
+            <li class=""><a href="home.html">
+                <img alt="home" src="images/home.png">
+                <p>Home</p>
+            </a></li>
+            <li class=""><a href="order.html">
+                <img alt="order" src="images/order.png">
+                <p>Order</p>
+            </a></li>
+            <li class="active"><a href="notifs.html">
+                <img alt="notifications" src="images/notifs.png">
+                <p>Notifications</p>
+            </a></li>
+            <li class=""><a href="settings.html">
+                <img alt="settings" src="images/settings.png">
+                <p>Settings</p>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer>
+    Made by Ng Guo Chiang
+</footer>
+</body>
+</html>

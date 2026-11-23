@@ -1,0 +1,179 @@
+/* Homepage main layout */
+main {
+    width: 100%;
+    margin: auto;
+
+    text-align: left;
+}
+
+main h1 {
+    text-align: left;
+}
+
+main h2 {
+    color: var(--heading-color);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+/* Welcome section */
+.welcome h1 {
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: var(--text-2);
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* Featured meal */
+.featured-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    background: var(--background-1);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.featured-card img {
+    width: 40%;
+    max-width: 300px;
+    height: 200px;
+
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.featured-info {
+    flex: 1;
+}
+
+.featured-info h3 {
+    font-size: 22px;
+    margin-top: 0;
+    color: var(--heading-color);
+}
+
+.featured-info p {
+    color: var(--text-1);
+}
+
+.featured-info .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+/* Button */
+.order-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-1);
+    background: var(--active-background);
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: var(--background-3);
+    transform: translateY(-2px);
+}
+
+/* Popular meals */
+.popular-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.food-card {
+    background: var(--background-1);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-3px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 140px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.food-card p {
+    color: var(--heading-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Campus announcement */
+.announcement-card {
+    background: var(--background-1);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.announcement-card h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+.announcement-card p {
+    color: var(--text-1);
+}
+
+.announcement-card a {
+    color: var(--heading-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.announcement-card a:hover {
+    text-decoration: underline;
+}
+
+/* Smaller screens */
+@media (max-width: 700px) {
+    .featured-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featured-card img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .popular-list {
+        grid-template-columns: 1fr;
+    }
+}

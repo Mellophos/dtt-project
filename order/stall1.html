@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order - Stall 1</title>
+    <script src="../js/theme.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="stall.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<body data-stall-name="Rice Corner">
+<header>
+    <img alt="logo" src="../images/ite_logo.png">
+    <h1>ITE Ordering App</h1>
+</header>
+
+
+<main>
+    <section class="back-section">
+        <a href="../order.html">← Back to Stalls</a>
+    </section>
+
+    <section class="stall-header">
+        <div class="stall-heading">
+            <div>
+                <h1>Rice Corner</h1>
+                <p>Rice meals and local favourites</p>
+            </div>
+            <span class="stall-status open">Open</span>
+        </div>
+        <p class="stall-location">
+            Location: Foodgle
+        </p>
+    </section>
+
+    <section class="menu-section">
+        <h2>Menu</h2>
+        <div class="menu-categories">
+            <button class="menu-category active" data-category="all">All</button>
+            <button class="menu-category" data-category="rice">Rice Meals</button>
+        </div>
+    </section>
+
+    <section class="food-section">
+        <h2>Available Items</h2>
+
+        <div class="food-list">
+
+            <article class="food-card" data-category="rice"
+                     data-name="Chicken Rice" data-price="4.50">
+                <img alt="Chicken Rice" src="../images/chicken_rice.jpg">
+                <div class="food-info">
+                    <h3>Chicken Rice</h3>
+                    <p>Chicken served with fragrant rice.</p>
+                    <span class="food-price">$4.50</span>
+                    <button class="add-btn" type="button">Add to Order</button>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="rice"
+                     data-name="Teriyaki Chicken Rice" data-price="5.00">
+                <img alt="Teriyaki Chicken Rice" src="../images/teriyaki_rice.jpg">
+                <div class="food-info">
+                    <h3>Teriyaki Chicken Rice</h3>
+                    <p>Grilled chicken with teriyaki sauce.</p>
+                    <span class="food-price">$5.00</span>
+                    <button class="add-btn" type="button">Add to Order</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <h2>Your Order</h2>
+
+        <div id="cart-items">
+            <p class="empty-cart">Your order is currently empty.</p>
+        </div>
+
+        <div class="cart-total">
+            <strong>Total:</strong>
+            <strong id="cart-total">$0.00</strong>
+        </div>
+
+        <button class="checkout-btn" type="button">Continue</button>
+        <p aria-live="polite" id="checkout-message"></p>
+    </section>
+</main>
+
+<!-- Meal options popup -->
+<div class="modal-overlay" hidden id="meal-modal">
+    <div class="meal-modal">
+        <button class="modal-close" id="modal-close" type="button">×</button>
+
+        <h2 id="modal-name">Meal Name</h2>
+        <p id="modal-description"></p>
+
+        <label for="meal-size">Meal size</label>
+        <select id="meal-size">
+            <option value="0">Regular</option>
+            <option value="1.50">Large (+$1.50)</option>
+        </select>
+
+        <label for="meal-addon">Add-on</label>
+        <select id="meal-addon">
+            <option value="0">No add-on</option>
+            <option value="1.00">Extra egg (+$1.00)</option>
+            <option value="1.50">Extra chicken (+$1.50)</option>
+        </select>
+
+        <p class="modal-price" id="modal-price"></p>
+
+        <button class="confirm-add" id="confirm-add" type="button">
+            Add to Order
+        </button>
+    </div>
+</div>
+
+
+<nav>
+    <div class="navbar">
+        <ul class="nav-links">
+            <li class=""><a href="../home.html">
+                <img alt="home" src="../images/home.png">
+                <p>Home</p>
+            </a></li>
+            <li class="active"><a href="../order.html">
+                <img alt="order" src="../images/order.png">
+                <p>Order</p>
+            </a></li>
+            <li class=""><a href="../notifs.html">
+                <img alt="notifications" src="../images/notifs.png">
+                <p>Notifications</p>
+            </a></li>
+            <li class=""><a href="../settings.html">
+                <img alt="settings" src="../images/settings.png">
+                <p>Settings</p>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer>
+    Made by Ng Guo Chiang
+</footer>
+<script src="stall.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* Order page layout */
+main {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+main h2 {
+    color: var(--heading-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+/* Page heading */
+.order-heading h1 {
+    margin-bottom: 10px;
+}
+
+.order-heading p {
+    color: var(--text-2);
+    margin-top: 0;
+}
+
+/* Cafeteria selection */
+.cafeteria-options {
+    display: flex;
+    gap: 12px;
+}
+
+.cafeteria-btn {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background-1);
+    color: var(--heading-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cafeteria-btn:hover {
+    background: var(--hover-background);
+}
+
+.cafeteria-btn.active {
+    background: var(--active-background);
+    color: var(--background-1);
+    border-color: var(--active-background);
+}
+
+/* Categories */
+.category-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-btn {
+    padding: 10px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--background-1);
+    color: var(--text-1);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+    background: var(--hover-background);
+}
+
+.category-btn.active {
+    background: var(--active-background);
+    color: var(--background-1);
+    border-color: var(--active-background);
+}
+
+/* Stall cards */
+.stall-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.stall-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    background: var(--background-1);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 15px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.stall-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.stall-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stall-info {
+    flex: 1;
+}
+
+.stall-info h3 {
+    color: var(--heading-color);
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.stall-info p {
+    color: var(--text-2);
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.stall-status {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.open {
+    color: var(--stall-open);
+}
+
+.closed {
+    color: var(--stall-closed);
+}
+
+.stall-info a {
+    color: var(--heading-color);
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.stall-info a:hover {
+    text-decoration: underline;
+}
+
+.stall-location {
+    color: var(--heading-color);
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.order-search {
+    flex: 1;
+    min-width: 0;
+}
+
+.order-search input {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Voice Ordering */
+.voice-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: var(--active-background);
+    color: var(--background-1);
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+var(--background-1) -space: nowrap;
+    transition: .3s;
+}
+
+.voice-btn:hover {
+    background: var(--background-3);
+}
+
+.voice-btn img {
+    width: 20px;
+    height: 20px;
+    filter: var(--icon-active-filter);
+}
+
+/* Voice ordering overlay */
+.voice-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.voice-overlay[hidden] {
+    display: none;
+}
+
+.voice-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: var(--background-1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.voice-modal h2 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+.voice-modal p {
+    color: var(--text-2);
+}
+
+.voice-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--background-3);
+}
+
+.mic-animation {
+    width: 100px;
+    height: 100px;
+    background: var(--hover-background);
+    border-radius: 50%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mic-animation img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    filter: var(--icon-filter);
+}
+
+.mic-animation.listening {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(3, 79, 99, .3);
+    }
+
+    70% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(3, 79, 99, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(3, 79, 99, 0);
+    }
+}
+
+.voice-instruction {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.6;
+}
+
+.voice-result {
+    background: var(--hover-background);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.voice-result h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+.voice-result p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.voice-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.voice-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+#retry-voice {
+    background: var(--hover-background);
+    color: var(--heading-color);
+}
+
+#retry-voice:hover {
+    background: var(--border);
+}
+
+#confirm-voice {
+    background: var(--active-background);
+    color: var(--background-1);
+}
+
+#confirm-voice:hover {
+    background: var(--background-2);
+}
+
+@media (max-width: 450px) {
+    .voice-modal {
+        padding: 25px 20px;
+    }
+
+    .voice-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .voice-btn {
+        width: 100%;
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .stall-list {
+        grid-template-columns: 1fr;
+    }
+
+    .voice-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 450px) {
+    .stall-card img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .stall-card {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .cafeteria-btn {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}

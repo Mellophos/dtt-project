@@ -1,0 +1,153 @@
+/* Notifications main layout */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+    text-align: left;
+}
+
+/* Page heading */
+.notif-heading h1 {
+    margin-bottom: 10px;
+}
+
+.notif-heading p {
+    color: var(--text-2);
+    margin-top: 0;
+}
+
+/* Notification controls */
+.notif-controls {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.notif-controls h2 {
+    color: var(--heading-color);
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.notif-count {
+    color: var(--text-2);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Notification list */
+.notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual notification */
+.notif-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    background: var(--background-1);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.notif-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Unread notification */
+.notif-card.unread {
+    background: var(--unread-notif-bg);
+    border-left: 4px solid var(--heading-color);
+}
+
+/* Notification icon */
+.notif-icon {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Icon types */
+.order-icon {
+    background: var(--order-icon-bg);
+    color: var(--order-icon-color);
+}
+
+.announcement-icon {
+    background: var(--ann-icon-bg);
+    color: var(--ann-icon-color);
+}
+
+/* Notification content */
+.notif-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notif-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notif-title h3 {
+    color: var(--heading-color);
+    font-size: 17px;
+    margin: 0;
+}
+
+.notif-content p {
+    color: var(--text-1);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+/* Timestamp */
+.notif-time {
+    color: var(--notif-time);
+    font-size: 12px;
+}
+
+/* Unread indicator */
+.unread-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--background-3);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .notif-card {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .notif-icon {
+        min-width: 45px;
+        height: 45px;
+        font-size: 9px;
+    }
+
+    .notif-title h3 {
+        font-size: 15px;
+    }
+}
